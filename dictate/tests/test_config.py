@@ -50,3 +50,11 @@ def test_unknown_polish_mode_rejected(tmp_path):
 def test_missing_explicit_config_file_raises(tmp_path):
     with pytest.raises(ConfigError, match="nope.json"):
         load_config(tmp_path / "nope.json")
+
+
+def test_discover_config_path(tmp_path):
+    from dictate.config import discover_config_path
+
+    assert discover_config_path(tmp_path) is None
+    (tmp_path / "config.json").write_text("{}")
+    assert discover_config_path(tmp_path) == tmp_path / "config.json"

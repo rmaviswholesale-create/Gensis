@@ -55,11 +55,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
-    from dictate.config import load_config
+    from dictate.config import discover_config_path, load_config
     from dictate.dictionary import Dictionary
-    from dictate.polish.rules import RulePolisher
 
-    config = load_config(args.config)
+    config = load_config(args.config or discover_config_path())
     dictionary = Dictionary.load(config.dictionary_path)
     transforms: list[Transform] = [dictionary.apply, build_polisher(config).polish]
 

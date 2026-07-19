@@ -63,6 +63,12 @@ class Config:
     dictionary_path: Path = Path("dictionary.json")
 
 
+def discover_config_path(directory: str | Path = ".") -> Path | None:
+    """Return ./config.json if present; used when no --config is given."""
+    candidate = Path(directory) / "config.json"
+    return candidate if candidate.exists() else None
+
+
 def load_config(path: str | Path | None) -> Config:
     """Load config from `path`; None means built-in defaults."""
     config = Config()

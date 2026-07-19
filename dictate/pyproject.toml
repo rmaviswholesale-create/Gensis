@@ -33,3 +33,7 @@ src = ["src", "tests"]
 python_version = "3.11"
 strict = false
 check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["pynput.*", "pyperclip", "sounddevice", "faster_whisper", "pystray", "PIL.*"]
+ignore_missing_imports = true
