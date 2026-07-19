@@ -1,6 +1,6 @@
 # Progress
 
-Current slice: 5 — Windows layer (hotkey, audio capture, injector)
-Done: slices 1-4 (pipeline core; dictionary + rules; chunker/STT/config/--simulate; OllamaPolisher with
-timeout + off-task-response fallback; 70 tests green; real E2E verified on jfk.wav)
-Next: thin pynput/sounddevice wrappers with lazy imports; injector length-based clipboard fallback logic unit-tested
+Current slice: 6 — tray app wiring, README, verification, PR
+Done: slices 1-5 (pipeline core; dictionary + rules; chunker/STT/config/--simulate; OllamaPolisher;
+HotkeyController toggle+PTT, MicrophoneCapture, TypingInjector with clipboard fallback; 86 tests green)
+Next: tray.py wiring capture session, README with Windows manual checklist, ruff/mypy, push + draft PR

@@ -7,7 +7,7 @@ dependencies = []
 
 [project.optional-dependencies]
 stt = ["faster-whisper>=1.0"]
-windows = ["sounddevice>=0.4", "pynput>=1.7", "pystray>=0.19", "pillow>=10"]
+windows = ["sounddevice>=0.4", "pynput>=1.7", "pystray>=0.19", "pillow>=10", "pyperclip>=1.8"]
 
 [dependency-groups]
 dev = ["pytest>=8", "ruff>=0.4", "mypy>=1.10"]
