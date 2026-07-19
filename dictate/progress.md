@@ -1,5 +1,5 @@
 # Progress
 
-Current slice: 2 — dictionary + rule polisher
-Done: slice 1 (scaffold, spec/plan docs, interfaces, DictationPipeline + PipelineRunner, 16 tests green)
-Next: failing tests for dictionary overrides + rules polisher, then implement
+Current slice: 3 — faster-whisper engine + --simulate mode
+Done: slices 1-2 (pipeline core; Dictionary with word-boundary/longest-match overrides; RulePolisher; 39 tests green)
+Next: failing tests for WAV loading/VAD chunker/engine wiring, then FasterWhisperEngine + CLI --simulate
