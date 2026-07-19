@@ -1,0 +1,35 @@
+[project]
+name = "dictate"
+version = "0.1.0"
+description = "System-wide low-latency dictation: global hotkey, local Whisper transcription, LLM polish, active-window text injection."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+stt = ["faster-whisper>=1.0"]
+windows = ["sounddevice>=0.4", "pynput>=1.7", "pystray>=0.19", "pillow>=10"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.4", "mypy>=1.10"]
+
+[project.scripts]
+dictate = "dictate.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dictate"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+check_untyped_defs = true
