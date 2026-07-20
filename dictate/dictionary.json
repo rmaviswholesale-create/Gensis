@@ -1,0 +1,10 @@
+{
+  "overrides": {
+    "get hub": "GitHub",
+    "jason": "JSON",
+    "pie torch": "PyTorch",
+    "cube control": "kubectl",
+    "post gress": "Postgres",
+    "vs code": "VS Code"
+  }
+}
