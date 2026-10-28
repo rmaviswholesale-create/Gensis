@@ -1,0 +1,23 @@
+{
+  "loops": {
+    "nightly-docs": {
+      "kind": "routine",
+      "triggerId": "trig_01BhwJrZhQdETqpbFNR3MdPd",
+      "cron": "7 3 * * * (UTC)",
+      "nextRunAt": "2026-10-29T03:07:00Z",
+      "status": "scheduled"
+    },
+    "nightly-changelog": {
+      "kind": "routine",
+      "triggerId": "trig_01Y4yPC5Sp5QmTTzRLGSDY1H",
+      "cron": "11 3 * * * (UTC)",
+      "nextRunAt": "2026-10-29T03:11:00Z",
+      "status": "scheduled"
+    },
+    "coverage-goal": { "kind": "in-session", "status": "not-started" },
+    "ci-watcher": { "kind": "in-session", "status": "not-started" },
+    "repo-cleanup": { "kind": "in-session", "status": "not-started" }
+  },
+  "lastRun": "2026-10-28T04:10:25Z",
+  "version": 1
+}

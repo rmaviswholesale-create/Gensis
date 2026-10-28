@@ -1,0 +1,13 @@
+{
+  "hotkey": { "combo": "<ctrl>+<alt>+d", "mode": "toggle" },
+  "audio": { "sample_rate": 16000, "device": null },
+  "stt": { "model": "small", "device": "cpu", "compute_type": "int8", "language": "en" },
+  "dictionary_path": "dictionary.json",
+  "polish": {
+    "mode": "ollama",
+    "ollama_host": "http://localhost:11434",
+    "ollama_model": "llama3.2:3b",
+    "timeout_seconds": 3.0
+  },
+  "inject": { "method": "type", "clipboard_threshold_chars": 200, "pre_inject_delay_ms": 50 }
+}
